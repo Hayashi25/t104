@@ -1,0 +1,122 @@
+body{
+    background-color: #023859;
+    margin: 0;
+    display: grid;
+    grid-template-areas:'nav nav nav nav '
+                        'header section segunda div'
+                        'footer footer footer footer';  
+    grid-template-rows: 20vh 70vh 50vh; 
+    font-family: 'Arvo', serif; 
+    color: #66E4F2;                   
+}
+
+nav{
+    grid-area: nav;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav iframe{
+    width: 120px;
+    height: auto;
+    display: flex;
+}
+
+header, section, .segunda, div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav a:hover{
+    color: #66E4F2;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+    border: 4px double #66E4F2;
+}
+
+header{
+    grid-area: header;
+}
+
+section{
+    grid-area: section;
+}
+
+.segunda{
+    grid-area: segunda;
+}
+
+div{
+    grid-area: div;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #049DD9;
+    color: #0D0D0D;
+}
+
+.rodape{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+@media( max-width: 768px ) {
+    body{
+        grid-template-areas:'nav nav nav nav'
+                            'header header section section'
+                            'segunda segunda div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 60vh;
+    }
+    .rodape{
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a{
+        display: none;
+    }
+}
+
+@media( max-width: 425px ) {
+    body{
+        grid-template-areas:'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 70vh 70vh 200vh;
+    }
+
+    .rodape{
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a{
+        display: none;
+    }
+}
+
